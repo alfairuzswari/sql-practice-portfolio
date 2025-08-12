@@ -54,7 +54,7 @@ Dataset ini berisi data penjualan dari 15 produk yang terbagi ke dalam 5 kategor
 
 **Tabel Relational**
 
-![](screenshot\ERD.png)
+![](screenshot/ERD.png)
 
 > Tabel Relational dalam proyek ini merepresentasikan hubungan antar tabel utama dalam sistem penjualan dan menjadi acuan utama untuk memahami alur data, relasi antar entitas, dan mempermudah penulisan query SQL yang efisien.
 
@@ -100,9 +100,9 @@ copy sales from 'C:\Program Files\PostgreSQL\17\data\sales\sales.csv' delimiter 
 
 **📷 Screenshot hasil cek jumlah baris tiap tabel:**
 
-![](screenshot\rowproducts.png)
-![](screenshot\rowregions.png)
-![](screenshot\rowsales.png)
+![](screenshot/rowproducts.png)
+![](screenshot/rowregions.png)
+![](screenshot/rowsales.png)
 
 **Interpretasi:** Data berhasil dimuat dengan total 500 baris pada sales, 15 baris pada products, dan 5 baris pada regions.
 
@@ -116,7 +116,7 @@ select sum(total_amount) as total_penjualan from sales;
 
 **📷 Screenshot hasil:**
 
-![](screenshot\query-1.png)
+![](screenshot/query-1.png)
 
 **Interpretasi:** Total penjualan seluruh transaksi adalah $208278.77, menunjukkan nilai kumulatif penjualan selama 2 tahun.
 
@@ -128,7 +128,7 @@ select round(avg(quantity), 2) as rata_rata_terjual from sales;
 
 **📷 Screenshot hasil:**
 
-![](screenshot\query-2.png)
+![](screenshot/query-2.png)
 
 **Interpretasi:** Rata-rata unit terjual per transaksi adalah 10.79 ≈ 11 unit.
 
@@ -140,7 +140,7 @@ select max(unit_price) as harga_tertinggi, min(unit_price) as harga_terendah fro
 
 **📷 Screenshot hasil:**
 
-![max-min unit price](screenshot\query-3.png)
+![max-min unit price](screenshot/query-3.png)
 
 **Interpretasi:** Harga unit tertinggi adalah $72.96, sedangkan terendah adalah $10.59.
 
@@ -164,7 +164,7 @@ group by
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-4.png)
+![alt text](screenshot/query-4.png)
 
 **Interpretasi:** Kategori **Fruits** mencatat penjualan tertinggi, sedangkan **Stationery** terendah.
 
@@ -187,7 +187,7 @@ order by
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-5-1.png) ![alt text](screenshot\query-5-2.png)
+![alt text](screenshot/query-5-1.png) ![alt text](screenshot/query-5-2.png)
 
 **Interpretasi:** Data menunjukkan pola penjualan yang sangat volatil atau tidak stabil dari bulan ke bulan, dengan perubahan yang cukup ekstrem hampir setiap kuartalnya.
 
@@ -204,7 +204,7 @@ where
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-6.png)
+![alt text](screenshot/query-6.png)
 
 **Interpretasi:** Total penjualan tahun 2024 adalah $115059.77.
 
@@ -225,13 +225,13 @@ where
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-7.png)
+![alt text](screenshot/query-7.png)
 
 **Interpretasi:** Penjualan produk Milk dari keseluruhan dataset transaksi (2023-2024) senilai $11751.13
 
 **Query 8:** Penjualan Region 3/West
 
-> Saya telah mengubah 5 nilai kolom region_name menjadi North, West, East, South, Central, Lengkap nya cek file script-query.sql [di sini](sql\script-query.sql)
+> Saya telah mengubah 5 nilai kolom region_name menjadi North, West, East, South, Central, Lengkap nya cek file script-query.sql [di sini](sql/script-query.sql)
 
 ```sql
 select
@@ -248,7 +248,7 @@ where
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-8.png)
+![alt text](screenshot/query-8.png)
 
 **Interpretasi:** Total penjualan yang dilakukan di Region West senilai $48043.15
 
@@ -271,7 +271,7 @@ from
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-9.png)
+![alt text](screenshot/query-9.png)
 
 **Interpretasi:** Dengan urutan ini, kita dapat dengan mudah mengidentifikasi transaksi terbaru atau membuat paging data transaksi. Berguna untuk analisis tren terkini atau penelusuran riwayat penjualan.
 
@@ -313,7 +313,7 @@ WHERE
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-10.png)
+![alt text](screenshot/query-10.png)
 
 **Interpretasi:** Hasilnya membantu dalam pengambilan keputusan bisnis seperti strategi stok, promosi khusus, atau product bundling berdasarkan performa produk di tiap kategori.
 
@@ -344,7 +344,7 @@ ORDER BY
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-11.png)
+![alt text](screenshot/query-11.png)
 
 **Interpretasi:** Analisis ini mengungkap tren pertumbuhan atau penurunan penjualan dari bulan ke bulan. Dapat digunakan untuk evaluasi strategi penjualan atau mengantisipasi musim penjualan.
 
@@ -376,7 +376,7 @@ group by category;
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-12.png)
+![alt text](screenshot/query-12.png)
 
 **Interpretasi:** Pipeline ini memastikan hanya data yang valid digunakan, sekaligus memberi gambaran kategori mana yang menghasilkan penjualan terbesar.
 
@@ -406,6 +406,6 @@ order by tahun, bulan;
 
 **📷 Screenshot hasil:**
 
-![alt text](screenshot\query-13.png)
+![alt text](screenshot/query-13.png)
 
 **Interpretasi:** Pendekatan ini membantu fokus pada periode-periode di mana bisnis mengalami perkembangan signifikan, sehingga strategi dari bulan tersebut dapat direplikasi.
